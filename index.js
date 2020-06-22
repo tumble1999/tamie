@@ -2,7 +2,6 @@ var tamie = {}
 
 {
 	console.log("Tamie v0.1 Created by Tumble")
-	// grab all plugins and pass world through
 	let plugins = require('./plugins/');
 
 	for (let i of plugins) {
