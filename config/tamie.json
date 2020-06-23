@@ -1,0 +1,9 @@
+{
+  "plugins-old": [
+    "vanilla",
+    "fileman",
+    "progman",
+    "commands"
+  ],
+  "plugins": []
+}

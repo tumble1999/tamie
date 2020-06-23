@@ -1,0 +1,34 @@
+folder(path){
+getFileList()
+getFolderList()
+getList()
+require():module
+getfolder()
+getFile():file
+}
+
+file(path) {
+gettext()
+getjson()
+}
+
+InputEventHandler - Alerts to Process Input
+OutputEventHandler - Alerts to Output
+
+
+Init
+Input
+Process
+Output
+
+
+
+prompt.on("lines",TamieInputs.bind("prompt"))#
+
+TamieInputs.on("prompt",function(input) {
+	TamieOutputs.emit("stdout",imput)
+})
+
+TamieOutputs.on("stdout",function(...input) {
+	console.log(...inputs);
+})
