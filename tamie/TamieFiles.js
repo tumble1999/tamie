@@ -23,7 +23,7 @@ var TamieFileUtil = {
 		return new Promise((resolve, reject) => {
 			fs.unlink(file, resolve);
 		});
-	},
+	}
 };
 
 
@@ -105,6 +105,10 @@ class TamieFile {
 		data = cb(data)||data;
 		this.setJson(data);
 	}
+
+	async jsonEmpty() {
+		return Object.keys(await this.getJson()).length == 0
+	}
 }
 
 
@@ -142,7 +146,7 @@ class TamieFolder {
 	}
 
 	require(id) {
-		return require.main.require(".\\"+TamieFolder.RootResolve(this.resolve(id)) + "\\");
+		return require.main.require(".\\"+TamieFolder.RootResolve(this.resolve(id)));
 	}
 
 	getFolder(folder) {

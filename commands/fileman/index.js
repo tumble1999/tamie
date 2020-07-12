@@ -1,12 +1,12 @@
-module.exports = function(tamie,action,...p) {
+module.exports = function({TamieOldContext},action,...p) {
 	if(action=="help"){
-		tamie.say("File Manager Actions:",Object.keys(tamie.fileman))
+		TamieOldContext.say("File Manager Actions:",Object.keys(TamieOldContext.fileman))
 		return
 	}
-	var o = tamie.fileman[action](...p);
+	var o = TamieOldContext.fileman[action](...p);
 	if(o.constructor.name=="Promise") {
-		o.then(w=>tamie.say(w.toString()))
+		o.then(w=>TamieOldContext.say(w.toString()))
 	} else {
-		tamie.say(o.toString());
+		TamieOldContext.say(o.toString());
 	}
 }

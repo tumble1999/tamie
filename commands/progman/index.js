@@ -1,7 +1,7 @@
-module.exports = function(tamie,action,...p) {
+module.exports = function({TamieOldContext},action,...p) {
 	if(action=="help"){
-		tamie.say("Program Manager Actions:",Object.keys(tamie.progman));
+		TamieOldContext.say("Program Manager Actions:",Object.keys(TamieOldContext.progman));
 		return;
 	}
-	tamie.say(tamie.progman[action](...p));
+	TamieOldContext.say(TamieOldContext.progman[action](...p));
 }

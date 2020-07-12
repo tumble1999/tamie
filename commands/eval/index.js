@@ -1,4 +1,4 @@
-module.exports = function(tamie,...p) {
+module.exports = function({TamieProcessEvents,TamieOutputEvents},...p) {
 	p.unshift("return");
-	tamie.say(Function(p.join(" ")).call(this))
+	TamieOutputEvents.emit("stdout",Function(p.join(" ")).call(this))
 }

@@ -2,8 +2,10 @@
   "plugins-old": [
     "vanilla",
     "fileman",
-    "progman",
-    "commands"
+    "progman"
   ],
-  "plugins": []
+  "plugins": [
+	  "prompt",
+	  "commands"
+	]
 }

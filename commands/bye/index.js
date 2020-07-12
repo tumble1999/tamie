@@ -1,3 +1,3 @@
-module.exports = function(tamie) {
+module.exports = function({}) {
 	process.exit();
 }
